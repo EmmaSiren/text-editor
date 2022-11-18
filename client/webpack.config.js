@@ -20,19 +20,17 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: ''
+        title: 'Webpack Plugin'
       }), 
 
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'src-sw.js',
+        swDest: '.service-worker.js',
       }), 
 
       new WebpackPwaManifest({
-        fingerprints: false,
-        inject: true, 
-        name: '',
-        short_name: '',
+        name: 'JATE',
+        short_name: 'JATE',
         background_color: '#225ca3',
         theme_color: '#225ca3',
         start_url: './',
